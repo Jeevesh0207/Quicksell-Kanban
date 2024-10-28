@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
-import { DropMenu, KanbanBoard } from "./components";
+import { DropMenu, KanbanBoard, Loading,Error } from "./components";
 import { Display, Down } from "./svg";
 import { useSelector, useDispatch } from "react-redux";
 import { setDisplayData, fetchData, setfilterData } from "./redux/actions";
@@ -60,8 +60,8 @@ function App() {
     }
   }, [groupBy, orderBy, loading, dispatch, list]);
 
-  if (loading) return <h1>Loading</h1>;
-  if (error) return <h1>Error</h1>;
+  if (loading) return <Loading/>;
+  if (error) return <Error/>;
 
   return (
     <div className="App">
