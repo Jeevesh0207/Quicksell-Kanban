@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Grouping",
+    "list": ["Status", "Users", "Priority"]
+  },
+  {
+    "name": "Ordering",
+    "list": ["Priority", "Title"]
+  }
+]
